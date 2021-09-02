@@ -1,0 +1,11 @@
+.aditional-info {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 25%;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.description img {
+   text-align: center;
+}
