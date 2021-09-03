@@ -5,17 +5,24 @@ import './Card.css'
 
 function Card() {
     return (
-        <main>
+        <main className="contenedor">
             <img src="./img/image-default.png" alt="" />
                 <h3>Título/ Nombre</h3>
                 <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+
                 <section className="aditional-info">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                    <article> 
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>   
+                    </article>
+                    <article> 
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>  
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                    </article>
                 </section>
-                <a href="">Ver más</a>
-                </main>
+                <a href="">Ver más</a>       
+        </main>
     );
 }
 

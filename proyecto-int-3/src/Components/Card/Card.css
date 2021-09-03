@@ -1,11 +1,20 @@
+.contenedor{
+    justify-content: center;
+}
 .aditional-info {
+    display: flex;
     padding: 10px;
     margin-bottom: 20px;
-    width: 25%;
-    background-color: red;
+    width: 50%;
+    background-color: gray;
     border-radius: 5px;
 }
-
 .description img {
    text-align: center;
+}
+article{
+    padding: 20px;
+    width: 50%;
+    margin-bottom: 30px;
+    border-radius: 15px;
 }

@@ -4,7 +4,7 @@ import './Header.css'
 function Header (){
     return(
         
-        <header>
+        <header >
                 <h1>Título/Nombre de la app</h1>
                 <section>
                     <p>Ordenar ASC/ DESC</p>
