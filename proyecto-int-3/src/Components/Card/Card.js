@@ -1,30 +1,12 @@
+import React, { Component } from 'react'
 
-import React from 'react'
-import './Card.css'
-
-
-function Card() {
+ function Card() {
     return (
-        <main className="contenedor">
-            <img src="./img/image-default.png" alt="" />
-                <h3>Título/ Nombre</h3>
-                <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
-
-                <section className="aditional-info">
-                    <article> 
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>   
-                    </article>
-                    <article> 
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>  
-                    </article>
-                    <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                    </article>
-                </section>
-                <a href="">Ver más</a>       
-        </main>
-    );
+        <article> 
+            <h4></h4>
+            <img/>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>  
+        </article>
+    )
 }
-
 export default Card;
-
