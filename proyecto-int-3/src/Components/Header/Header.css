@@ -4,6 +4,7 @@
 header{
   display: flex;
   padding: 40px;
+  justify-content: space-between;
 }
 .App-logo {
   height: 40vmin;
@@ -25,6 +26,7 @@ header{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {

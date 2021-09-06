@@ -12,7 +12,7 @@ function Header (){
                     <i className="fas fa-align-justify"></i>
                     <form action="">
                         <input type="text" name="search" id="" placeholder="Search"/>
-                            <button type="submit"><i className="fas fa-search"></i></button>
+                            <button type="submit"><i className="fas fa-search"/>enviar</button>
                     </form>
                 </section>
         </header>
