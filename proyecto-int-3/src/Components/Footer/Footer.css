@@ -1,9 +1,13 @@
 .footer{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: row;
-    margin-top: 4vh;
-    height: 4vh;
+    background-color: black;
+    padding: 20px 0;
+    margin-top: 80px;
+    color: white;
+    margin: auto;
+    width: 90%;
 }
 .team{
     display: flex;
@@ -13,4 +17,15 @@
 .team li{
     margin:0 1vh;
     align-self: center;
+}
+.logodh{
+    width: 150px;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+}
+.udesa{
+    justify-content: center;
+    width: 50%;
 }

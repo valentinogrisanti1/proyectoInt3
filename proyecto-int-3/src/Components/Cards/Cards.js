@@ -18,7 +18,8 @@ class Cards extends Component {
         <main className="contenedor">
             <img src="./img/image-default.png" alt="" />
                 <h3>PelisNet</h3>
-                <article><p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+                <article >
+                    <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                 </article>
 
                 <section className="aditional-info">
@@ -27,7 +28,7 @@ class Cards extends Component {
               <Card/>
               <Card/>
                 </section>
-                <a href="">Ver más</a>       
+                      
         </main>
     );
 }
