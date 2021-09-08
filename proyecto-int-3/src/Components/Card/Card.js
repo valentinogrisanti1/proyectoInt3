@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 
- function Card() {
+ function Card(props) {
+    //  const{
+    //      pelicula
+    //  }
     return (
         <article> 
          <h4></h4>
