@@ -9,6 +9,8 @@ class Cards extends Component {
         super()
         this.state = {
             peliculas:[],
+            viewMore: false,
+            text: "ver mas"
         }
     }
     componentDidMount() {
@@ -23,6 +25,13 @@ class Cards extends Component {
             }) 
         })
      }
+     
+     borrarTarjeta(peliculaBorrar){
+         let peliculasQueQuedan = this.state.peliculas.filter(pelicula => pelicula.id !== peliculaBorrar);
+         this.setState({
+             peliculas: peliculasQueQuedan,
+         })
+     }
     render(){ 
        
     return (
@@ -31,7 +40,8 @@ class Cards extends Component {
                 <section className="aditional-info" >
                {  this.state.peliculas.map(pelicula =>(
                 <Card key={pelicula.id}
-               datosPelicula={pelicula}/>
+               datosPelicula={pelicula}
+               borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)}/>
         ) ) }
                 </section>
                       

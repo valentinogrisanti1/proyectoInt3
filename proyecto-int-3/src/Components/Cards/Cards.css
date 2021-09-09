@@ -1,25 +1,41 @@
-.contenedor{
-   
-   
-}
 .aditional-info {
     display: flex;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 5px;
+    padding: 40px;
 }
 
 article{
     padding: 20px;
-    flex-basis: 20%;
+    transition-duration: 0.4s;
     margin-bottom: 10px;
     border-radius: 15px;
-    background-color: gray;
+    background-color: rgb(210, 210, 210);
+    width: 20%;
 }
 .ver-mas{
     color: blueviolet;
-    
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+article:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.image{
+    width: 60%;
+    border-radius: 15px;
+}
+.image-contenedor{
+    display: flex;
+    justify-content: space-around;
 }
