@@ -24,24 +24,16 @@ class Cards extends Component {
         })
      }
     render(){ 
-        this.setState.peliculas.map(pelicula =>(
-            <Card key={pelicula.id}
-            datosPelicula={pelicula}/>
-        ) )
+       
     return (
         <main className="contenedor">
-            <img src="./img/image-default.png" alt="" />
-                <h3>PelisNet</h3>
-                <article >
-                    <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
-                </article>
 
-                {/* <section className="aditional-info"> */}
-              {/* <Card/>
-              <Card/>
-              <Card/>
-              <Card/>
-                </section> */}
+                <section className="aditional-info" >
+               {  this.state.peliculas.map(pelicula =>(
+                <Card key={pelicula.id}
+               datosPelicula={pelicula}/>
+        ) ) }
+                </section>
                       
         </main>
     );

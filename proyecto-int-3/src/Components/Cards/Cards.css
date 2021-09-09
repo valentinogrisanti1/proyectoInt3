@@ -1,21 +1,21 @@
 .contenedor{
-    justify-content: center;
+   
+   
 }
 .aditional-info {
     display: flex;
     padding: 10px;
-    margin-bottom: 20px;
-    width: 100%;
+    margin-bottom: 5px;
     border-radius: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
 }
-.description img {
-   text-align: center;
-}
+
 article{
     padding: 20px;
-    width: 50%;
-    margin-bottom: 30px;
+    flex-basis: 20%;
+    margin-bottom: 10px;
     border-radius: 15px;
     background-color: gray;
 }

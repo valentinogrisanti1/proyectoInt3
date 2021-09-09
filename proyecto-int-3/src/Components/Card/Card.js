@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
  function Card(props) {
-    //  const{
-    //      pelicula
-    //  }
+   const
+    { poster_path, title, overview ,id} = props.datosPelicula;
+     
+     console.log(props);
     return (
-        <article> 
-         <h4></h4>
-         <img/>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p> 
+        <article > 
+         <h4>{title}</h4>
+         <img src={'https://image.tmdb.org/t/p/w342/' + poster_path}/>
+         <p>{overview }</p> 
          <a className="ver-mas" href="">Ver más</a> 
         </article>
     )
