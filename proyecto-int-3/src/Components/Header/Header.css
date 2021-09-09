@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.logo{
+  width: 300px;
+  height: 300px;
+}
 header{
   display: flex;
   padding: 40px;
