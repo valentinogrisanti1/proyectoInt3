@@ -3,20 +3,18 @@ import './Header.css'
 
 function Header (){
     return(
-        
         <header >
                 <h1>PelisNet</h1>
-                <section>
+                <section className="barra-superior">
                     <p>Ordenar ASC/ DESC</p>
                     <i className="fas fa-th"></i>
                     <i className="fas fa-align-justify"></i>
                     <form action="">
-                        <input type="text" name="search" id="" placeholder="Search"/>
-                            <button type="submit"><i className="fas fa-search"/>enviar</button>
+                        <input className="barraBuscar" type="text" name="search" id="" placeholder="Search"/>
+                            <button id="boton" type="submit"><i className="fas fa-search"/></button>
                     </form>
                 </section>
-        </header>
-        
+        </header> 
     );
 }
 

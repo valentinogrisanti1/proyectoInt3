@@ -9,6 +9,24 @@ header{
   display: flex;
   padding: 40px;
   justify-content: space-between;
+  flex-direction: row;
+  background-color: #ff5c5c;;
+}
+.barra-superior{
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+.barraBuscar{
+  border-radius: 50px;
+  height: 30px;
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#boton{
+  border-radius: 30px;
+  height: 30px;
 }
 .App-logo {
   height: 40vmin;
