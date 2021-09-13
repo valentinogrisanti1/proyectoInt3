@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './Header.css'
 
 function Header (){
@@ -6,7 +6,8 @@ function Header (){
         
         <header >
                
-               <h4>PelisNet</h4> 
+               <h4 className="titulo">PelisNet</h4> 
+            
                 
                 <section>
                     <p>Ordenar ASC/ DESC</p>

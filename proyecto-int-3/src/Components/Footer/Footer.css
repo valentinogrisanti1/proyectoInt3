@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    background-color: black;
+    background-color: #191970;
     padding: 20px 0;
     margin-top: 80px;
     color: white;
     margin: auto;
-    width: 90%;
+    width: 100%;
 }
 .team{
     display: flex;

@@ -10,7 +10,8 @@ class Cards extends Component {
         this.state = {
             peliculas:[],
             viewMore: false,
-            text: "ver mas"
+            text: "ver mas",
+            cargando: true, 
         }
     }
     componentDidMount() {
@@ -21,6 +22,7 @@ class Cards extends Component {
         .then(data => {
             console.log(data);
             this.setState( {
+                cargando: true,
                 peliculas: data.results
             }) 
         })
@@ -32,6 +34,22 @@ class Cards extends Component {
              peliculas: peliculasQueQuedan,
          })
      }
+
+     cargando() {
+         if (this.state.cargando){
+             this.setState({
+                 cargando: true,
+                 text: "Cargando..."
+                 
+             })
+         }
+         else{
+             this.setState({
+                 cargando: false,
+                 text: "",
+             })
+         }
+     }
     render(){ 
        
     return (
@@ -41,7 +59,11 @@ class Cards extends Component {
                {  this.state.peliculas.map(pelicula =>(
                 <Card key={pelicula.id}
                datosPelicula={pelicula}
-               borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)}/>
+               borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)}
+                // {this.state.cargando === flase ? (
+                //     <p>Cargando...</p>
+                // ):}
+               />
         ) ) }
                 </section>
                       
