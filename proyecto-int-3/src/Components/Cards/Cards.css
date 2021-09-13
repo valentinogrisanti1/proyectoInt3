@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     gap: 5px;
     padding: 40px;
+    color: black;
 }
 
 article{
@@ -12,8 +13,11 @@ article{
     transition-duration: 0.4s;
     margin-bottom: 10px;
     border-radius: 15px;
-    background-color: rgb(210, 210, 210);
+    background-color: #F5F5F5;
     width: 23%;
+    color: #191970;
+    text-align: center;
+    font-size: 18px;
 }
 .ver-mas{
     color: blueviolet;
@@ -23,7 +27,7 @@ article{
     justify-content: space-between;
 }
 article:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 white;
 }
 .hide{
     display: none;
@@ -38,4 +42,8 @@ article:hover{
 .image-contenedor{
     display: flex;
     justify-content: space-around;
+}
+.contenedor{
+    background-color: black;
+
 }
