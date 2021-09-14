@@ -25,13 +25,13 @@ class Header extends Component {
                <h4 className="titulo">PelisNet</h4> 
             
                 
-                <section>
-                    <p>Ordenar ASC/ DESC</p>
+                <section className="infoHeader">
+                    {/* <p>Ordenar ASC/ DESC</p> */}
                     <i className="fas fa-th"></i>
                     <i className="fas fa-align-justify"></i>
                     <form action="" onSubmit={(evento)=>this.evitarSubmit(evento)}>
-                        <input type="text" name="search" id="" placeholder="Search" onChange={(evento)=>this.controlarCambio(evento)} value={`${this.state.valor}`}/>
-                            <button type="submit"><i className="fas fa-search"/>enviar</button>
+                    <input className="barraBuscar" type="text" name="search" id="" placeholder="Search" onChange={(evento)=>this.controlarCambio(evento)} value={`${this.state.valor}`}/>
+                    <button lassName="boton"type="submit"><i />ENVIAR</button>
                     </form>
                 </section>
         </header>
