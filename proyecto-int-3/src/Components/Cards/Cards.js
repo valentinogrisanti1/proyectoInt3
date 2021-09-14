@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import './Cards.css'
 import Card from '../Card/Card';
+import Header from '../Header/Header';
 
 
 class Cards extends Component {
@@ -10,9 +11,10 @@ class Cards extends Component {
         this.state = {
             peliculas:[],
             viewMore: false,
-            text: "ver mas"
-        
-            cargando: true, 
+            text: "ver mas",
+            peliculasIniciales: [],
+            pagina: 1
+
         }
     }
     componentDidMount() {
@@ -24,7 +26,10 @@ class Cards extends Component {
             console.log(data);
             this.setState( {
                 cargando: true,
-                peliculas: data.results
+                peliculas: data.results,
+                peliculasIniciales: data.results,
+                pagina: 2
+
             }) 
         })
      }
@@ -33,6 +38,7 @@ class Cards extends Component {
          let peliculasQueQuedan = this.state.peliculas.filter(pelicula => pelicula.id !== peliculaBorrar);
          this.setState({
              peliculas: peliculasQueQuedan,
+             peliculasIniciales: peliculasQueQuedan,
          })
      }
 
@@ -51,24 +57,55 @@ class Cards extends Component {
              })
          }
      }
-    render(){ 
+     filtrarPeliculas(peliculaBuscada){
+        let peliculasQueQuedan = this.state.peliculasIniciales.filter(pelicula => pelicula.title.toLowerCase().includes(peliculaBuscada.toLowerCase()));
+        this.setState({
+            peliculas: peliculasQueQuedan,
+        })
+     }
+     agregarPelicula(){
+        const url= 'https://api.themoviedb.org/3/movie/top_rated?api_key=bad307a59294abaae8c2d0fcc48475d8&language=es-ES&page='+ this.state.pagina
+        console.log(url);
+        fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(data => {
+            console.log(data);
+            this.setState( {
+                cargando: true,
+                peliculas: this.state.peliculas.concat(data.results),
+                peliculasIniciales: this.state.peliculasIniciales.concat(data.results),
+                pagina: this.state.pagina+1
+
+            }) 
+        })
+     }
+    
+     render(){ 
        
     return (
+        <React.Fragment>
+        <Header filtrarPeliculas={(peliculaBuscada)=>this.filtrarPeliculas(peliculaBuscada)}/>
         <main className="contenedor">
-
-                <section className="aditional-info" >
+    {this.state.peliculas.length !== 0? (
+        <section className="aditional-info" >
                {  this.state.peliculas.map(pelicula =>(
                 <Card key={pelicula.id}
                datosPelicula={pelicula}
                borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)}
-                // {this.state.cargando === flase ? (
-                //     <p>Cargando...</p>
-                // ):}
+               
+              
+             
                />
+               
         ) ) }
-                </section>
-                      
+                </section>):(
+                    <h2>Cargando...</h2>
+                )}
+                
+            
+         <button onClick ={()=> this.agregarPelicula()}>Agregar pelicula</button>  
         </main>
+        </React.Fragment>
     );
 }
 }

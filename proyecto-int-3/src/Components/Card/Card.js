@@ -43,7 +43,7 @@ import React, {Component}from 'react'
             <p>Hola</p>
          </section> 
          <p className="ver-mas" onClick={ ()=> this.viewMore()}> {this.state.text}</p> 
-         <button onClick ={()=> this.agregarPelicula}>Agregar pelicula</button>
+         
         </article>
     )
   }
