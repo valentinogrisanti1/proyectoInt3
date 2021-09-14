@@ -11,6 +11,7 @@ class Cards extends Component {
             peliculas:[],
             viewMore: false,
             text: "ver mas"
+            
         }
     }
     componentDidMount() {
