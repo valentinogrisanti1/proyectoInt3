@@ -10,7 +10,7 @@
 
 article{
     padding: 20px;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: #F5F5F5;
@@ -22,7 +22,7 @@ article{
 .ver-mas{
     color: blueviolet;
 }
-.navigation{
+.barra-superior{
     display: flex;
     justify-content: space-between;
 }
@@ -46,4 +46,13 @@ article:hover{
 .contenedor{
     background-color: black;
 
+}
+.agregar-pelicula{    
+        border-radius: 50px;
+        height: 40px;
+        align-items: center;
+        width: 100%;
+        transition-duration: 0.5s;
+        background-color: #f5f5f5;
+        box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 white;  
 }

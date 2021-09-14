@@ -103,7 +103,7 @@ class Cards extends Component {
                 )}
                 
             
-         <button onClick ={()=> this.agregarPelicula()}>Agregar pelicula</button>  
+                <button onClick ={()=> this.agregarPelicula()} className="agregar-pelicula">Agregar pelicula</button>
         </main>
         </React.Fragment>
     );

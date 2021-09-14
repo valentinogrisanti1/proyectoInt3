@@ -38,8 +38,8 @@ header{
   box-sizing: border-box;
 }
 .boton{
-  border-radius: 45px;
-  height: 100px;
+  border-radius: 50px;
+  height: 30px;
 }
 .App-logo {
   height: 40vmin;

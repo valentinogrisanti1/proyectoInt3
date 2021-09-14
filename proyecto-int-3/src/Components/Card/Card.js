@@ -27,7 +27,7 @@ import React, {Component}from 'react'
     render(){ 
     return (
         <article > 
-          <section className="navigation">
+          <section className="barra-superior">
                     <div>
                       <i className="fas fa-chevron-left"></i>
                       <i className="fas fa-chevron-right"></i>
