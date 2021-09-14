@@ -10,7 +10,7 @@ header{
   padding: 40px;
   justify-content: space-between;
   flex-direction: row;
-  background-color: #191970;;
+  background-color: #191970;
   color: white;
 
 }
@@ -35,11 +35,6 @@ header{
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -53,15 +48,8 @@ header{
 
 }
 
-.App-link {
-  color: #61dafb;
+.titulo{
+  font-size: 250%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
