@@ -1,11 +1,11 @@
 /* ORIENTACION */
 
-.column{
+.columna{
     display: flex;
     flex-direction: column;
 }
 
-.row{
+.fila{
     display:flex;
     flex-direction: row;
 }

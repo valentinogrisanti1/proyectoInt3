@@ -62,12 +62,12 @@ class Cards extends Component {
      cambiarOrientacion(){
          if(this.state.cambiarOrientacion){
              this.setState({
-                 text: 'fas fa-align-justify',
+                 text: 'fa-align-justify',
                 cambiarOrientacion: false, 
              })
          } else{
              this.setState({
-                 text: 'fas fa-th',
+                 text: 'fa-th',
                  cambiarOrientacion: true
              })
          }
@@ -104,7 +104,7 @@ class Cards extends Component {
         <main className="contenedor">
 {/* ORIENTACION */}
         <i type="button" onClick={() => this.cambiarOrientacion()} className={`fas ${this.state.text}`}></i>
-                <div className={ ` aditional-info${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} ></div>
+        <div className={ ` aditional-info${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} ></div>
 
     {this.state.peliculas.length !== 0? (
         <section className="aditional-info" >
