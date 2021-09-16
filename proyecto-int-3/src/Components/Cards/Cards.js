@@ -13,8 +13,8 @@ class Cards extends Component {
             viewMore: false,
             text: "ver mas",
             peliculasIniciales: [],
-            pagina: 1
-
+            pagina: 1,
+           cargando: false,
         }
     }
     componentDidMount() {
@@ -28,7 +28,8 @@ class Cards extends Component {
                 cargando: true,
                 peliculas: data.results,
                 peliculasIniciales: data.results,
-                pagina: 2
+                pagina: 2,
+                cambiarOrientacion: false,
 
             }) 
         })
@@ -57,6 +58,20 @@ class Cards extends Component {
              })
          }
      }
+// ORIENTACION 
+     cambiarOrientacion(){
+         if(this.state.cambiarOrientacion){
+             this.setState({
+                 text: 'fas fa-align-justify',
+                cambiarOrientacion: false, 
+             })
+         } else{
+             this.setState({
+                 text: 'fas fa-th',
+                 cambiarOrientacion: true
+             })
+         }
+     }
      filtrarPeliculas(peliculaBuscada){
         let peliculasQueQuedan = this.state.peliculasIniciales.filter(pelicula => pelicula.title.toLowerCase().includes(peliculaBuscada.toLowerCase()));
         this.setState({
@@ -80,31 +95,33 @@ class Cards extends Component {
         })
      }
     
+
      render(){ 
        
     return (
         <React.Fragment>
         <Header filtrarPeliculas={(peliculaBuscada)=>this.filtrarPeliculas(peliculaBuscada)}/>
         <main className="contenedor">
-            
+{/* ORIENTACION */}
+        <i type="button" onClick={() => this.cambiarOrientacion()} className={`fas ${this.state.text}`}></i>
+                <div className={ ` aditional-info${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} ></div>
+
     {this.state.peliculas.length !== 0? (
         <section className="aditional-info" >
                {  this.state.peliculas.map(pelicula =>(
                 <Card key={pelicula.id}
                datosPelicula={pelicula}
                borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)}
-               
-              
-             
                />
                
         ) ) }
                 </section>):(
-                    <h2>Cargando...</h2>
+                    
+                    <h2 className="sin-resultados">no hay resultados...</h2>
                 )}
                 
             
-         <button onClick ={()=> this.agregarPelicula()}>Agregar pelicula</button>  
+                <button onClick ={()=> this.agregarPelicula()} className="agregar-pelicula">Agregar pelicula</button>
         </main>
         </React.Fragment>
     );
