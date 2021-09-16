@@ -86,6 +86,7 @@ class Cards extends Component {
         <React.Fragment>
         <Header filtrarPeliculas={(peliculaBuscada)=>this.filtrarPeliculas(peliculaBuscada)}/>
         <main className="contenedor">
+            
     {this.state.peliculas.length !== 0? (
         <section className="aditional-info" >
                {  this.state.peliculas.map(pelicula =>(
