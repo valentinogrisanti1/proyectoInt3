@@ -28,7 +28,8 @@ class Cards extends Component {
                 cargando: true,
                 peliculas: data.results,
                 peliculasIniciales: data.results,
-                pagina: 2
+                pagina: 2,
+                cambiarOrientacion: false,
 
             }) 
         })
@@ -54,6 +55,20 @@ class Cards extends Component {
              this.setState({
                  cargando: false,
                  text: "",
+             })
+         }
+     }
+// ORIENTACION 
+     cambiarOrientacion(){
+         if(this.state.cambiarOrientacion){
+             this.setState({
+                 text: 'fas fa-align-justify',
+                cambiarOrientacion: false, 
+             })
+         } else{
+             this.setState({
+                 text: 'fas fa-th',
+                 cambiarOrientacion: true
              })
          }
      }
@@ -87,6 +102,10 @@ class Cards extends Component {
         <React.Fragment>
         <Header filtrarPeliculas={(peliculaBuscada)=>this.filtrarPeliculas(peliculaBuscada)}/>
         <main className="contenedor">
+{/* ORIENTACION */}
+        <i type="button" onClick={() => this.cambiarOrientacion()} className={`fas ${this.state.text}`}></i>
+                <div className={ ` aditional-info${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} ></div>
+
     {this.state.peliculas.length !== 0? (
         <section className="aditional-info" >
                {  this.state.peliculas.map(pelicula =>(

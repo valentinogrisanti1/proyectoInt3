@@ -1,3 +1,15 @@
+/* ORIENTACION */
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+}
+
 .aditional-info {
     display: flex;
     align-items: flex-start;
