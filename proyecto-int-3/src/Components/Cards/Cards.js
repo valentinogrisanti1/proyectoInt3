@@ -13,8 +13,8 @@ class Cards extends Component {
             viewMore: false,
             text: "ver mas",
             peliculasIniciales: [],
-            pagina: 1
-
+            pagina: 1,
+           cargando: false,
         }
     }
     componentDidMount() {
@@ -80,6 +80,7 @@ class Cards extends Component {
         })
      }
     
+
      render(){ 
        
     return (
@@ -92,14 +93,12 @@ class Cards extends Component {
                 <Card key={pelicula.id}
                datosPelicula={pelicula}
                borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)}
-               
-              
-             
                />
                
         ) ) }
                 </section>):(
-                    <h2>Cargando...</h2>
+                    
+                    <h2 className="sin-resultados">no hay resultados...</h2>
                 )}
                 
             

@@ -7,8 +7,6 @@
   
   
 }
-
-
 .App {
   text-align: center;
 }
@@ -23,7 +21,6 @@ header{
   flex-direction: row;
   background-color: #191970;
   color: white;
-
 }
 .barra-superior{
   display: flex;
