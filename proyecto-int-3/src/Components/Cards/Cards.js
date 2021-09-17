@@ -108,13 +108,14 @@ class Cards extends Component {
         <Header filtrarPeliculas={(peliculaBuscada)=>this.filtrarPeliculas(peliculaBuscada)}/>
         <main className="contenedor">
 {/* ORIENTACION */}
-        <i type="button"  onClick={() => this.cambiarOrientacion()} className={`fas ${this.state.text}`}></i>
+        <div className="contenedorBotenes"><i type="button" id="botones"  onClick={() => this.cambiarOrientacion()} className={this.state.text}></i></div>
        
         
          {this.state.peliculas.length !== 0? (
        
-       <section className="aditional-info" >
-           {`extra ${this.state.cambiarOrientacion ? 'columna' : 'fila'}`}
+       <section className= {`${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} >
+           
+           
             
                {  this.state.peliculas.map(pelicula =>(
                 <Card key={pelicula.id} datosPelicula={pelicula} borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)} />
