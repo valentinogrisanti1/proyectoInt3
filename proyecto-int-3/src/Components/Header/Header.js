@@ -27,8 +27,7 @@ class Header extends Component {
                 
                 <section className="infoHeader">
                     {/* <p>Ordenar ASC/ DESC</p> */}
-                    <i className="fas fa-th"></i>
-                    <i className="fas fa-align-justify"></i>
+                   
                     <form action="" onSubmit={(evento)=>this.evitarSubmit(evento)}>
                     <input className="barraBuscar" type="text" name="search" id="" placeholder="Buscar " onChange={(evento)=>this.controlarCambio(evento)} value={`${this.state.valor}`}/>
                     <button className="boton"type="submit" ><i />ENVIAR</button>

@@ -15,7 +15,10 @@ class Cards extends Component {
             peliculasIniciales: [],
             pagina: 1,
            cargando: false,
+           cambiarOrientacion: false,
+           text:'fas fa-align-justify',
         }
+
     }
     componentDidMount() {
         const url= 'https://api.themoviedb.org/3/movie/top_rated?api_key=bad307a59294abaae8c2d0fcc48475d8&language=es-ES&page=1'
@@ -29,7 +32,8 @@ class Cards extends Component {
                 peliculas: data.results,
                 peliculasIniciales: data.results,
                 pagina: 2,
-                cambiarOrientacion: false,
+              
+                
 
             }) 
         })
@@ -62,12 +66,12 @@ class Cards extends Component {
      cambiarOrientacion(){
          if(this.state.cambiarOrientacion){
              this.setState({
-                 text: 'fa-align-justify',
+                 text: 'fas fa-align-justify',
                 cambiarOrientacion: false, 
              })
          } else{
              this.setState({
-                 text: 'fa-th',
+                 text: 'fas fa-th',
                  cambiarOrientacion: true
              })
          }
@@ -96,23 +100,24 @@ class Cards extends Component {
      }
     
 
-     render(){ 
+     render(){
+   
        
     return (
         <React.Fragment>
         <Header filtrarPeliculas={(peliculaBuscada)=>this.filtrarPeliculas(peliculaBuscada)}/>
         <main className="contenedor">
 {/* ORIENTACION */}
-        <i type="button" onClick={() => this.cambiarOrientacion()} className={`fas ${this.state.text}`}></i>
-        <div className={ ` aditional-info${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} ></div>
-
-    {this.state.peliculas.length !== 0? (
-        <section className="aditional-info" >
+        <i type="button"  onClick={() => this.cambiarOrientacion()} className={`fas ${this.state.text}`}></i>
+       
+        
+         {this.state.peliculas.length !== 0? (
+       
+       <section className="aditional-info" >
+           {`extra ${this.state.cambiarOrientacion ? 'columna' : 'fila'}`}
+            
                {  this.state.peliculas.map(pelicula =>(
-                <Card key={pelicula.id}
-               datosPelicula={pelicula}
-               borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)}
-               />
+                <Card key={pelicula.id} datosPelicula={pelicula} borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)} />
                
         ) ) }
                 </section>):(
