@@ -8,8 +8,9 @@ import Cards from './Components/Cards/Cards';
 function App() {
   return (
     <div>
-  
+      
       <Cards/>
+
       <Footer />
       
     </div>

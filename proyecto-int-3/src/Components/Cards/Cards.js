@@ -106,7 +106,10 @@ class Cards extends Component {
     return (
         <React.Fragment>
         <Header filtrarPeliculas={(peliculaBuscada)=>this.filtrarPeliculas(peliculaBuscada)}/>
+
         <main className="contenedor">
+       <section>
+        <h1 className="populares"> PELICULAS POPULARES</h1></section>
 {/* ORIENTACION */}
         <div className="contenedorBotenes"><i type="button" id="botones"  onClick={() => this.cambiarOrientacion()} className={this.state.text}></i></div>
        
@@ -127,7 +130,7 @@ class Cards extends Component {
                 )}
                 
             
-                <button onClick ={()=> this.agregarPelicula()} className="agregar-pelicula">Agregar pelicula</button>
+                <button onClick ={()=> this.agregarPelicula()} className="buscador">AGREGAR PELICULAS</button>
         </main>
         </React.Fragment>
     );

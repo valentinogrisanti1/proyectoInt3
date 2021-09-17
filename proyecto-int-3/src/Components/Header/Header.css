@@ -1,25 +1,19 @@
 
-.infoHeader{
-  display: flex;
-   justify-content: space-around; 
-  flex-grow: 1; 
-  padding-top: inherit;
-  
-  
-}
+
 .App {
   text-align: center;
 }
-.logo{
-  width: 500px;
-  height: 500px;
+img{
+  width: 200px;
+  height: 200px;
 }
 header{
   display: flex;
   padding: 40px;
-  justify-content: space-between;
+  padding-left: 80px;
+  height: 250px;
   flex-direction: row;
-  background-color: #191970;
+  background-color: black;
   color: white;
 }
 .barra-superior{
@@ -31,7 +25,7 @@ header{
   border-radius: 50px;
   height: 30px;
   width: 300px;
-  padding: 10px;
+  
   box-sizing: border-box;
 }
 .boton{
@@ -49,3 +43,31 @@ header{
 }
 
 
+.buscador {
+
+  width: 500px;
+   background-color: #131414;
+   
+   border: 3px solid #176e6a;
+   border-radius: 10px;
+   height: 40px;
+   color: black;
+   font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+   }
+.buscador:hover{
+  background-color: rgb(101, 180, 178);
+}
+
+   .botonbuscador{
+    background-color:#131414;
+    border: 3px solid #176e6a;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+}
+
+.botonbuscador:hover{
+   background-color: #20A39E; 
+}

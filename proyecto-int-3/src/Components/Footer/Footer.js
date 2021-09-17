@@ -7,7 +7,6 @@ function Footer() {
         <footer className="footer">    
             <div>
              <ul className="team">
-                 <h2 className="udesa">Integrantes</h2>
                     <li>Luisa BENGOLEA</li>
                     <li>Valentino GRISANTI</li>
                     <li>Butista LANUSSE</li>

@@ -22,15 +22,15 @@ class Header extends Component {
         
         <header >
                
-               <h4 className="titulo">PelisNet</h4> 
-            
+               
+            <img  src='../img/net.png' alt=""></img>
                 
                 <section className="infoHeader">
                     {/* <p>Ordenar ASC/ DESC</p> */}
                    
                     <form action="" onSubmit={(evento)=>this.evitarSubmit(evento)}>
-                    <input className="barraBuscar" type="text" name="search" id="" placeholder="Buscar " onChange={(evento)=>this.controlarCambio(evento)} value={`${this.state.valor}`}/>
-                    <button className="boton"type="submit" ><i />ENVIAR</button>
+                    <input className="buscador" type="text" name="search" id="" placeholder="Buscar " onChange={(evento)=>this.controlarCambio(evento)} value={`${this.state.valor}`}/>
+                    <button className="botonbuscador"type="submit" ><i />ENVIAR</button>
                     </form>
                 </section>
         </header>

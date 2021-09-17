@@ -41,7 +41,7 @@ import React, {Component}from 'react'
                 </div>
                 <section className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>
                     <p>{this.props.datosPelicula.overview}</p>
-                    <p>Hola</p>
+                
                 </section> 
                 <p className="ver-mas" onClick={ ()=> this.viewMore()}> {this.state.text}</p> 
             </main>
