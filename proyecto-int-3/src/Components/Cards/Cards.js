@@ -126,7 +126,7 @@ class Cards extends Component {
         ) ) }
                 </section>):(
                     
-                    <h2 className="sin-resultados">no hay resultados...</h2>
+                    <h2 className="sin-resultados">No hay resultados...</h2>
                 )}
                 
             

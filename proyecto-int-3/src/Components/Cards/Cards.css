@@ -18,11 +18,19 @@
 }
 .columna article{
     width: 100%;
+    
+   
 }
 .columna article main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+   
+}
+.columna img{
+    width: 150px;
+    height: 150px;
+    
 }
 .columna{
     display: flex;
@@ -93,7 +101,11 @@ article:hover{
 
     color: white;
     text-align: center;
-}
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 40px;
+    color:#176e6a;
+    
+ }
 
 .buscador {
 
@@ -124,3 +136,5 @@ article:hover{
         margin-top: 0px;
         font-family: 'Alumni Sans', sans-serif;
  }
+
+ 
