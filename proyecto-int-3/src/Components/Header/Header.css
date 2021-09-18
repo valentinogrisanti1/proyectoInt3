@@ -47,7 +47,7 @@ header{
 
   width: 500px;
    background-color: #131414;
-   
+   margin-left: 560px;
    border: 3px solid #176e6a;
    border-radius: 10px;
    height: 40px;
@@ -66,6 +66,7 @@ header{
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
         font-size: 13px;
+        margin-left: 10px;
 }
 
 .botonbuscador:hover{
