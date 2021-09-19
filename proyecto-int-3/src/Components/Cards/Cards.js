@@ -112,21 +112,26 @@ class Cards extends Component {
 {/* ORIENTACION */}
         <div className="contenedorBotenes"><i type="button" id="botones"  onClick={() => this.cambiarOrientacion()} className={this.state.text}></i></div>
        
-        
-         {this.state.peliculas.length !== 0? (
-       
-       <section className= {`${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} >
-           
-           
-            
-               {  this.state.peliculas.map(pelicula =>(
-                <Card key={pelicula.id} datosPelicula={pelicula} borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)} />
-               
-        ) ) }
-                </section>):(
+        {this.state.cargando ? (
+             this.state.peliculas.length !== 0? (
+
+                <section className= {`${this.state.cambiarOrientacion ? 'columna' : 'fila'}`} >
                     
-                    <h2 className="sin-resultados">No hay resultados...</h2>
-                )}
+                    
+                     
+                        {  this.state.peliculas.map(pelicula =>(
+                         <Card key={pelicula.id} datosPelicula={pelicula} borrar={(peliculaBorrar) => this.borrarTarjeta(peliculaBorrar)} />
+                        
+                 ) ) }
+                         </section>):(
+         
+                             
+                             <h2 className="sin-resultados">No hay resultados...</h2>
+                         )
+        ):(
+            <h2 className="sin-resultados">Cargando...</h2>
+        )} 
+        
                 
             
                 <button onClick ={()=> this.agregarPelicula()} className="buscador">AGREGAR PELICULAS</button>
