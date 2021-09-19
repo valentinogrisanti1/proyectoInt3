@@ -31,9 +31,6 @@ class Cards extends Component {
                 peliculas: data.results,
                 peliculasIniciales: data.results,
                 pagina: 2,
-              
-                
-
             }) 
         })
      }
